@@ -26,8 +26,8 @@ let secondCard = '';
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
-  if (disabledCards.length === 20) {
-    clearInterval(this.loop);
+  if (disabledCards.length === 18) {
+    clearInterval(this.loop); 
     alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
   }
 }
@@ -43,6 +43,10 @@ const checkCards = () => {
 
     firstCard = '';
     secondCard = '';
+    
+    if (disabledCards.length === 18){
+      alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`); 
+    }
 
     checkEndGame();
 
